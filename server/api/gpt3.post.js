@@ -9,7 +9,7 @@ export default defineEventHandler(async(event) => {
     const { textGPT } = await readBody(event);
 
     const completion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo-16k",
+        model: "gpt-4-turbo",
         messages: [{ role: "user", content: textGPT }],
         temperature: 0.1,
         max_tokens: 3000,
