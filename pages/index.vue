@@ -31,7 +31,6 @@
         Generate Question..
       </button>
     </div>
-
     <section class="bg-white dark:bg-gray-900">
       <div class="max-w-screen-xl mx-auto">
         <div class="grid gap-8 md:grid-cols-3 grid-rows">
@@ -109,7 +108,7 @@
                   d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"
                 ></path>
               </svg>
-              Jumlah <i class="fas fa-sort-alpha-down    "></i>
+              Jumlah <i class="fas fa-sort-alpha-down"></i>
             </a>
             <textarea
               id="message"
@@ -160,6 +159,70 @@
             </button>
           </div>
         </div>
+
+        <!-- <div class="grid mt-4 gap-8 md:grid-cols-2 grid-rows">
+          <div
+            class="p-8 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 md:p-12"
+          >
+            <a
+              href="#"
+              class="bg-green-100 text-green-800 text-xl font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-green-400 mb-4"
+            >
+              <svg
+                class="w-3 h-3 mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+              Soal Pilihan Ganda
+            </a>
+            <textarea
+              id="message"
+              v-model="indicators"
+              rows="20"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Tulis indikator soal disini"
+            ></textarea>
+          </div>
+          <div
+            class="p-8 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 md:p-12"
+          >
+            <a
+              href="#"
+              class="bg-green-100 text-green-800 text-xl font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-green-400 mb-4"
+            >
+              <svg
+                class="w-3 h-3 mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+              Kunci Jawaban
+            </a>
+            <textarea
+              id="message"
+              v-model="indicators"
+              rows="20"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Tulis indikator soal disini"
+            ></textarea>
+          </div>
+        </div> -->
+
         <div
           class="p-4 mt-4 mb-8 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 md:p-12"
         >
@@ -262,7 +325,15 @@ export default {
         // }),
         body: JSON.stringify({
           textGPT:
-            "Buatkan saya " + this.jumlah+ " soal mata pelajaran " + this.pelajaran+ " dalam benuk pilihan ganda beserta jawabannya.Untuk siswa usia " + this.kelas+ " dengan indicator soal sebagai berikut " + this.indicators+ " Format response : (indikator) enter space (no soal). (soal) enter space setiap (pilihan ganda)  enter space jawaban: (opsi jawaban benar saja)",
+            "Buatkan saya " +
+            this.jumlah +
+            " soal mata pelajaran " +
+            this.pelajaran +
+            " dalam benuk pilihan ganda beserta jawabannya.Untuk siswa usia " +
+            this.kelas +
+            " dengan indicator soal sebagai berikut " +
+            this.indicators +
+            " Format response : (indikator) enter space (no soal). (soal) enter space setiap (pilihan ganda)  enter space jawaban: (opsi jawaban benar saja)",
         }),
       })
         .then((response) => {
