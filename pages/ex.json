@@ -1,0 +1,94 @@
+{
+    "indikator": {
+        "indikator1": {
+            "name": "Mathematics",
+            "soal1": {
+                "nomor": "nomor soal",
+                "pilihan": [{
+                        "pilihan": "A",
+                        "isi_pilihan": "isi_pilihan_a"
+                    },
+                    {
+                        "pilihan": "B",
+                        "isi_pilihan": "isi_pilihan_b"
+                    },
+                    {
+                        "pilihan": "C",
+                        "isi_pilihan": "isi_pilihan_c"
+                    },
+                    {
+                        "pilihan": "D",
+                        "isi_pilihan": "isi_pilihan_d"
+                    }
+                ],
+                "kunci_jawaban": "kunci_jawaban_berdasarkan_pilhan contoh A"
+            },
+            "soal2": {
+                "nomor": "nomor soal",
+                "pilihan": [{
+                        "pilihan": "A",
+                        "isi_pilihan": "isi_pilihan_a"
+                    },
+                    {
+                        "pilihan": "B",
+                        "isi_pilihan": "isi_pilihan_b"
+                    },
+                    {
+                        "pilihan": "C",
+                        "isi_pilihan": "isi_pilihan_c"
+                    },
+                    {
+                        "pilihan": "D",
+                        "isi_pilihan": "isi_pilihan_d"
+                    }
+                ],
+                "kunci_jawaban": "kunci_jawaban_berdasarkan_pilhan contoh A"
+            }
+        },
+        "indikator2": {
+            "name": "Science",
+            "soal1": {
+                "nomor": "nomor soal",
+                "pilihan": [{
+                        "pilihan": "A",
+                        "isi_pilihan": "isi_pilihan_a"
+                    },
+                    {
+                        "pilihan": "B",
+                        "isi_pilihan": "isi_pilihan_b"
+                    },
+                    {
+                        "pilihan": "C",
+                        "isi_pilihan": "isi_pilihan_c"
+                    },
+                    {
+                        "pilihan": "D",
+                        "isi_pilihan": "isi_pilihan_d"
+                    }
+                ],
+                "kunci_jawaban": "kunci_jawaban_berdasarkan_pilhan contoh B"
+            },
+            "soal2": {
+                "nomor": "nomor soal",
+                "pilihan": [{
+                        "pilihan": "A",
+                        "isi_pilihan": "isi_pilihan_a"
+                    },
+                    {
+                        "pilihan": "B",
+                        "isi_pilihan": "isi_pilihan_b"
+                    },
+                    {
+                        "pilihan": "C",
+                        "isi_pilihan": "isi_pilihan_c"
+                    },
+                    {
+                        "pilihan": "D",
+                        "isi_pilihan": "isi_pilihan_d"
+                    }
+                ],
+                "kunci_jawaban": "kunci_jawaban_berdasarkan_pilhan contoh C"
+            }
+        }
+    }
+}

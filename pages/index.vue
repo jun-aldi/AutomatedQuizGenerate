@@ -160,7 +160,7 @@
           </div>
         </div>
 
-        <!-- <div class="grid mt-4 gap-8 md:grid-cols-2 grid-rows">
+        <!-- <div class="grid gap-8 mt-4 md:grid-cols-2 grid-rows">
           <div
             class="p-8 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 md:p-12"
           >
@@ -279,6 +279,57 @@
 </template>
 <script>
 import { initFlowbite } from "flowbite";
+const yourJsonHere = {
+  indikator: {
+    indikator1: {
+      name: "Mathematics",
+      soal1: {
+        nomor: "nomor soal",
+        pilihan: [
+          {
+            pilihan: "A",
+            isi_pilihan: "isi_pilihan_a",
+          },
+          {
+            pilihan: "B",
+            isi_pilihan: "isi_pilihan_b",
+          },
+          {
+            pilihan: "C",
+            isi_pilihan: "isi_pilihan_c",
+          },
+          {
+            pilihan: "D",
+            isi_pilihan: "isi_pilihan_d",
+          },
+        ],
+        kunci_jawaban: "kunci_jawaban_berdasarkan_pilhan contoh A",
+      },
+      soal2: {
+        nomor: "nomor soal",
+        pilihan: [
+          {
+            pilihan: "A",
+            isi_pilihan: "isi_pilihan_a",
+          },
+          {
+            pilihan: "B",
+            isi_pilihan: "isi_pilihan_b",
+          },
+          {
+            pilihan: "C",
+            isi_pilihan: "isi_pilihan_c",
+          },
+          {
+            pilihan: "D",
+            isi_pilihan: "isi_pilihan_d",
+          },
+        ],
+        kunci_jawaban: "kunci_jawaban_berdasarkan_pilhan contoh A",
+      },
+    },
+  },
+};
 definePageMeta({
   layout: "nav",
   title: "My App",
@@ -308,6 +359,7 @@ export default {
       subject: "",
       indicators: "",
       jumlah: "",
+      ex:yourJsonHere,
     };
   },
   methods: {
@@ -333,7 +385,7 @@ export default {
             this.kelas +
             " dengan indicator soal sebagai berikut " +
             this.indicators +
-            " Format response : (indikator) enter space (no soal). (soal) enter space setiap (pilihan ganda)  enter space jawaban: (opsi jawaban benar saja)",
+            " RESPON LANGSUNG BENTUK JSON SEPERTI CONTOH JSON INI "+this.ex+""
         }),
       })
         .then((response) => {
